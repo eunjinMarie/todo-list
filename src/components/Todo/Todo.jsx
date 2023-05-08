@@ -16,12 +16,12 @@ export default function Todo({ todo, onUpdate, onDelete }) {
       <input
         className={styles.checkbox}
         type='checkbox'
-        id='checkbox'
+        id={todo.id}
         checked={status === 'completed'}
         onChange={handleChange}
       />
       <label
-        htmlFor='checkbox'
+        htmlFor={todo.id}
         className={`${styles.text} ${
           status === 'completed' && styles.completed
         }`}
