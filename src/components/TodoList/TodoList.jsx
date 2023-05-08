@@ -27,6 +27,9 @@ export default function TodoList({ filter }) {
   const filtered = getFilteredItems(todos, filter);
   return (
     <section className={styles.container}>
+      <button className={styles.button} onClick={() => setTodos([])}>
+        전체삭제
+      </button>
       <ul className={styles.list}>
         {filtered.map((item) => (
           <Todo
