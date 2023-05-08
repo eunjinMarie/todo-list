@@ -20,7 +20,12 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         checked={status === 'completed'}
         onChange={handleChange}
       />
-      <label htmlFor='checkbox' className={styles.text}>
+      <label
+        htmlFor='checkbox'
+        className={`${styles.text} ${
+          status === 'completed' && styles.completed
+        }`}
+      >
         {text}
       </label>
       <span className={styles.icon}>
